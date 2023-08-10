@@ -15,8 +15,6 @@ return new class extends Migration
             $table->id();
             $table->foreignId('address_id')->constrained();
             $table->foreignId('user_id')->constrained();
-            $table->integer('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
             $table->softDeletes();
         });
